@@ -1,0 +1,212 @@
+
+<!-- ------------------------==================------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Add Item</title>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(160deg, #3465c7, #7eb2dd);
+  background-size: 400% 400%;
+
+  -webkit-animation: AnimationName 34s ease infinite;
+  -moz-animation: AnimationName 34s ease infinite;
+  animation: AnimationName 34s ease infinite;
+}
+
+.container {
+  width: 100%;
+  max-width: 30rem;
+  background-color: #fff;
+}
+
+.heading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.form {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 3rem 2.5rem;
+}
+
+.form-heading {
+  font-size: 1.5rem;
+}
+
+.email {
+  display: block;
+  font-size: 1rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 3rem;
+  margin-bottom: 2rem;
+  padding: 0 0 0 1rem;
+}
+
+input[type="email"],
+input[type="password"] {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+.input-box-forgot {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-box-forgot a {
+  text-decoration: none;
+  color: #445e93;
+  font-weight: 600;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.checkbox p {
+  font-size: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.8rem 0;
+  color: #fff;
+  font-weight: 600;
+  background-color: rgb(29, 194, 155);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn:hover {
+    background-color: rgb(28, 120, 99);
+
+}
+
+.google {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.google a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #445e93;
+  font-weight: 600;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 15%;
+  }
+  50% {
+    background-position: 100% 86%;
+  }
+  100% {
+    background-position: 0% 15%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 15%;
+  }
+  50% {
+    background-position: 100% 86%;
+  }
+  100% {
+    background-position: 0% 15%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 15%;
+  }
+  50% {
+    background-position: 100% 86%;
+  }
+  100% {
+    background-position: 0% 15%;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <div class="heading">
+    <h1>Add Item</h1>
+  </div>
+
+  <div class="container">
+    <div class="form">
+      <div class="form-heading">
+        <p>Add Your Item</p>
+      </div>
+
+      <form action="/item" method="post" enctype="multipart/form-data">
+
+        <div class="input-box">
+          <label for="itemname" class="itemname">Item Name</label>
+          <input type="text" name="itemname" placeholder="Item Name">
+        </div>
+
+        <div class="input-box">
+            <label for="price" class="price">Price</label>
+            <input type="text" name="price" placeholder="Price">
+          </div>
+
+          <div class="input-box">
+            <label for="email" class="email">Email</label>
+            <input type="file" name="image" placeholder="Item Image">
+          </div>
+
+
+        <button type="submit" class="btn">Continue</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>

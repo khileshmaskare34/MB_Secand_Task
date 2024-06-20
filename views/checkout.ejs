@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<main>
+    <h1>Checkout</h1>
+    <form id="payment-form">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div id="payment-element">
+            <!-- Stripe.js injects the Payment Element here -->
+        </div>
+        <button id="submit-button">Pay</button>
+        <div id="error-message"></div>
+    </form>
+</main>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const stripePublishableKey = '<%= stripePublishableKey %>';
+</script>
+<script src="./javascripts/checkout.js"></script>

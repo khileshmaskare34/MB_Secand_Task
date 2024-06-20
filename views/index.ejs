@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  
+</head>
+<body>
+  <%- include('header.ejs') %>
+<main>
+    <div>
+      <h1>Items</h1>
+     
+      <a href="/item"><button>Add Item</button></a>
+  
+      <div class="item-box">
+        <% for(var i = 0; i< data.length; i++) {%>
+          <form action="/cart" method="post">
+            <div class="item">
+              <img src="/uploads/<%= data[i].image %>" alt="<%= data[i].image%>">
+              <h1><%= data[i].itemName %></h1>
+              <input type="hidden" name="item" value="<%= data[i].itemName %>">
+  
+              <h4>Price - <%= data[i].price %></h4>
+              <input type="hidden" name="item" value="<%= data[i].price %>">
+  
+              <input type="hidden" name="id" value="<%= data[i]._id%>">
+              <button data-id="<%= data._id %>" data-price="<%= data.price %>">Add to Cart</button>
+            </div>
+          </form>
+          <%}%>
+        </div>
+  
+    </div>
+
+</main>
+
+
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="./javascripts/script.js"></script>
+</body>
+</html>
